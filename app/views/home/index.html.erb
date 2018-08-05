@@ -1,0 +1,36 @@
+<% content_for :body_background, Wallpaper.current.image.size_4k.url %>
+
+<div id="container">
+  <div id="content">
+    <div id="clock"></div>
+    <div id="greeting"></div>
+  </div>
+
+  <div id="bottom">
+    <div id="weather">
+      <div id="observations">
+        <span class="icon"></span>
+        <div class="temp"><span class="number"></span><span class="deg">&deg;</span><span class="unit">C</span></div>
+        <div class="location"></div>
+      </div>
+
+      <div id="sun">
+        <div class="column">
+          <span class="wi wi-sunrise"></span>&nbsp;<span class="rise"></span>
+        </div>
+
+        <div class="column">
+          <span class="wi wi-sunset"></span>&nbsp;<span class="set"></span>
+        </div>
+      </div>
+
+      <button id="do_not_want">
+        <%= fa_icon "thumbs-down" %>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  var console_personal_name = "<%= @config['name'] %>";
+</script>

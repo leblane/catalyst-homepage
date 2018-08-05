@@ -1,0 +1,12 @@
+default: &default
+  application_id: <%= UNSPLASH_APPLICATION_ID %>
+  application_secret: <%= UNSPLASH_APPLICATION_SECRET %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
