@@ -1,5 +1,6 @@
 Unsplash.configure do |config|
-  yml = YAML.load_file(Rails.root.join("config/unsplash.yml"))[Rails.env]
+  template = ERB.new File.new(Rails.root.join("config/unsplash.yml")).read
+  yml = YAML.load(template.result(binding))[Rails.env]
 
   config.application_access_key = yml['application_access_key']
   config.application_secret = yml['application_secret']

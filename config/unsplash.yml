@@ -1,6 +1,6 @@
 default: &default
-  application_id: <%= UNSPLASH_APPLICATION_ID %>
-  application_secret: <%= UNSPLASH_APPLICATION_SECRET %>
+  application_access_key: <%= ENV['UNSPLASH_APPLICATION_ACCESS_KEY'] %>
+  application_secret: <%= ENV['UNSPLASH_APPLICATION_SECRET'] %>
 
 development:
   <<: *default
