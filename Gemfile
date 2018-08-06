@@ -51,6 +51,7 @@ group :development do
   gem 'rename'
   gem "capistrano", "~> 3.10", require: false
   gem "capistrano-rails", "~> 1.4", require: false
+  gem 'capistrano-rvm', require: false
   gem 'dotenv-rails'
 end
 
