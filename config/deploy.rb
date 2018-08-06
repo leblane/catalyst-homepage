@@ -38,3 +38,19 @@ append :linked_files, ".env"
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+
+namespace :bower do
+  desc 'Install bower'
+  task :install do
+    on roles(:web) do
+      within release_path do
+        with rails_env: fetch(:rails_env) do
+          execute :rake, 'bower:install CI=true'
+        end
+      end
+    end
+  end
+end
+
+before 'deploy:compile_assets', 'bower:install'
