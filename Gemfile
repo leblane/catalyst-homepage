@@ -52,7 +52,6 @@ group :development do
   gem "capistrano", "~> 3.10", require: false
   gem "capistrano-rails", "~> 1.4", require: false
   gem 'capistrano-rvm', require: false
-  gem 'dotenv-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -66,3 +65,4 @@ gem 'ruby-sun-times', require: 'sun_times'
 gem 'bootsnap', require: false
 gem 'font-awesome-rails'
 gem 'bower-rails'
+gem 'dotenv-rails'
